@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><TestRun id="d5fbcd01-718f-4606-8365-e2ad91e4bae3" name="agentservice@WIN-G7THORJDL33 2019-02-26 10:43:32" runUser="ipreotag\agentservice" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010"><Times creation="2019-02-26T10:43:32.9269697+00:00" queuing="2019-02-26T10:43:32.9269697+00:00" start="2019-02-26T10:42:14.1409697+00:00" finish="2019-02-26T10:45:41.1839695+00:00" /><TestSettings name="default" id="660573c3-c2cf-4369-90cc-6d47843145fe"><Execution><TestTypeSpecific /></Execution><Deployment runDeploymentRoot="agentservice_WIN-G7THORJDL33 2019-02-26 10_43_32" /><Properties /></TestSettings><Results><UnitTestResult executionId="0f829513-d002-486c-8081-a3f282a37fe3" testId="431540c3-10ad-570b-c133-70fd5b87b98d" testName="_2_CreateEvent" computerName="WIN-G7THORJDL33" duration="00:01:15.0650010" startTime="2019-02-26T10:42:14.1409697+00:00" endTime="2019-02-26T10:43:32.8839697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f829513-d002-486c-8081-a3f282a37fe3"><Output><StdOut>Environment: QX
+Url: https://web-eq.qx.i-deal.com/IP/
+-&gt; Using app.config
+[10:42:15] Feature 'Event Details General' run started.
+[10:42:17] Feature 'Event Details General'. BeforeFeature finished. Execution time: 00:00:02.4459359
+[10:42:17] Scenario 'Event Details General 2. Create event' run started.
+Given I login as 'EventCoordinator' user
+[10:42:27] Step 'I login as 'EventCoordinator' user' execution time : 00:00:09.9928023
+When I create 'Company Marketing' event
+Container: UBS.
+[10:43:31] Step 'I create 'Company Marketing' event' execution time : 00:01:03.2574937
+Then 'tabs' are appeared
+[10:43:31] Step ''tabs' are appeared' execution time : 00:00:00.4309107
+And Teams&amp;Contacts and Schedule buttons are displayed
+[10:43:31] Step 'Teams&amp;Contacts and Schedule buttons are displayed' execution time : 00:00:00.3696326
+[10:43:31] Scenario 'Event Details General 2. Create event' execution finished. Execution time : 00:01:14.0780860</StdOut></Output></UnitTestResult><UnitTestResult executionId="21c22c0f-91a8-4897-8542-d9026f4924d6" testId="20e52cff-9e06-3cd3-1442-c2e88e364abd" testName="_7_SelectAndSaveRole_JointLeadUBSLogistics" computerName="WIN-G7THORJDL33" duration="00:00:17.0164387" startTime="2019-02-26T10:43:32.9049697+00:00" endTime="2019-02-26T10:43:49.9229697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21c22c0f-91a8-4897-8542-d9026f4924d6"><Output><StdOut>bug
+[10:43:32] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+-&gt; error: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds
+[10:43:48] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:15.1710356
+Attachment - [File: '7._Select_and_save_Role131956514281529697.PNG' (image/png)]
+Attachment - [File: '7._Select_and_save_Role_0131956514284989697.PNG' (image/png)]
+And I select Joint Lead (UBS Logistics) from dropdown for 'Role' on 'Event Details' page
+-&gt; skipped because of previous errors
+When I click on 'Save' button on Event Details page
+-&gt; skipped because of previous errors
+Then I see Joint Lead (UBS Logistics) for 'Role' saved
+-&gt; skipped because of previous errors
+[10:43:49] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:16.0487741</StdOut><ErrorInfo><Message>Test method Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_JointLeadUBSLogistics threw exception: 
+Ipreo.AutomationFramework.UI.Components.Search.Exceptions.ElementNotFoundException: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds</Message><StackTrace>    at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.TryGet[T](IList`1 elements, ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.FindNativeElement(ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.get_NativeElement()
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.&lt;&gt;c__DisplayClass21_0`2.&lt;Eval&gt;b__0(ElementDecorator elementDecorator)
+   at Ipreo.AutomationFramework.UI.Services.SmartWait.WaitUntil[T](T testObject, Func`2 condition)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.Eval[TResult,TNativeElement](ElementExpression`2 expression)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.GetAttribute(String attributeName)
+   at Ipreo.AutomationFramework.UI.Components.Element.GetAttribute(String attributeName)
+   at Ipreo.Events.Automation.Common.Elements.Controls.Concrette.MainMenuElement.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Common\Elements\Controls\Concrette\MainMenuElement.cs:line 16
+   at Ipreo.Events.Automation.Steps.Common.MainContext.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Steps\Common\MainContext.cs:line 24
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateIplanner(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 333
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.Duplicate(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 307
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateEvent(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 295
+   at Ipreo.Events.Automation.Tests.IPlanner.Event_Details.EventDetailsGeneralDefinition.GivenIDuplicateIplannerCompanyRelatedEventType() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\IPlanner\Event Details\Event Details General.Definition.cs:line 61
+   at lambda_method(Closure , IContextManager )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature.ScenarioCleanup()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole(String testID, String roleValue, String[] exampleTags) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 25
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_JointLeadUBSLogistics() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 21
+</StackTrace></ErrorInfo></Output></UnitTestResult><UnitTestResult executionId="4a0bb712-9392-4140-887e-68f9d32508a2" testId="0b49f1be-6f43-ea25-110c-7bd07f9ff7ba" testName="_7_SelectAndSaveRole_JointLeadSharedLogistics" computerName="WIN-G7THORJDL33" duration="00:00:16.7592689" startTime="2019-02-26T10:43:49.9249697+00:00" endTime="2019-02-26T10:44:06.6849697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a0bb712-9392-4140-887e-68f9d32508a2"><Output><StdOut>bug
+[10:43:49] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+-&gt; error: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds
+[10:44:04] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:14.9473972
+Attachment - [File: '7._Select_and_save_Role131956514449119697.PNG' (image/png)]
+Attachment - [File: '7._Select_and_save_Role_0131956514452569697.PNG' (image/png)]
+And I select Joint Lead (Shared Logistics) from dropdown for 'Role' on 'Event Details' page
+-&gt; skipped because of previous errors
+When I click on 'Save' button on Event Details page
+-&gt; skipped because of previous errors
+Then I see Joint Lead (Shared Logistics) for 'Role' saved
+-&gt; skipped because of previous errors
+[10:44:05] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:15.8129965</StdOut><ErrorInfo><Message>Test method Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_JointLeadSharedLogistics threw exception: 
+Ipreo.AutomationFramework.UI.Components.Search.Exceptions.ElementNotFoundException: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds</Message><StackTrace>    at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.TryGet[T](IList`1 elements, ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.FindNativeElement(ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.get_NativeElement()
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.&lt;&gt;c__DisplayClass21_0`2.&lt;Eval&gt;b__0(ElementDecorator elementDecorator)
+   at Ipreo.AutomationFramework.UI.Services.SmartWait.WaitUntil[T](T testObject, Func`2 condition)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.Eval[TResult,TNativeElement](ElementExpression`2 expression)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.GetAttribute(String attributeName)
+   at Ipreo.AutomationFramework.UI.Components.Element.GetAttribute(String attributeName)
+   at Ipreo.Events.Automation.Common.Elements.Controls.Concrette.MainMenuElement.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Common\Elements\Controls\Concrette\MainMenuElement.cs:line 16
+   at Ipreo.Events.Automation.Steps.Common.MainContext.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Steps\Common\MainContext.cs:line 24
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateIplanner(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 333
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.Duplicate(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 307
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateEvent(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 295
+   at Ipreo.Events.Automation.Tests.IPlanner.Event_Details.EventDetailsGeneralDefinition.GivenIDuplicateIplannerCompanyRelatedEventType() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\IPlanner\Event Details\Event Details General.Definition.cs:line 61
+   at lambda_method(Closure , IContextManager )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature.ScenarioCleanup()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole(String testID, String roleValue, String[] exampleTags) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 25
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_JointLeadSharedLogistics() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 21
+</StackTrace></ErrorInfo></Output></UnitTestResult><UnitTestResult executionId="fde55b15-18a2-445a-aa03-8da16eb0dbbc" testId="a0e02b07-b4ca-e2d2-11e3-bb9ab6a8889f" testName="_7_SelectAndSaveRole_Sole" computerName="WIN-G7THORJDL33" duration="00:00:16.2474255" startTime="2019-02-26T10:44:06.6869697+00:00" endTime="2019-02-26T10:44:22.9349697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fde55b15-18a2-445a-aa03-8da16eb0dbbc"><Output><StdOut>bug
+[10:44:06] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+-&gt; error: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds
+[10:44:21] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:14.4661698
+Attachment - [File: '7._Select_and_save_Role131956514611889697.PNG' (image/png)]
+Attachment - [File: '7._Select_and_save_Role_0131956514615269697.PNG' (image/png)]
+And I select Sole from dropdown for 'Role' on 'Event Details' page
+-&gt; skipped because of previous errors
+When I click on 'Save' button on Event Details page
+-&gt; skipped because of previous errors
+Then I see Sole for 'Role' saved
+-&gt; skipped because of previous errors
+[10:44:22] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:15.3206225
+[10:44:22] Feature 'Event Details General' scenarios execution finished. Intermediate execution time : 00:02:07.5795946
+Event with '2048987981' id was deleted.
+[10:44:23] Feature 'Event Details General' finished. Full execution time : 00:02:08.1257507</StdOut><ErrorInfo><Message>Test method Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_Sole threw exception: 
+Ipreo.AutomationFramework.UI.Components.Search.Exceptions.ElementNotFoundException: Required element is not available. Search conditions:
+1) locator = 'Xpath: //a[text()="Duplicate Event"]'; 
+2) filters: ; 
+3) timeout: 10 seconds</Message><StackTrace>    at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.TryGet[T](IList`1 elements, ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Components.Search.ElementFinder`1.FindNativeElement(ISearchConfiguration searchConfiguration)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.get_NativeElement()
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.&lt;&gt;c__DisplayClass21_0`2.&lt;Eval&gt;b__0(ElementDecorator elementDecorator)
+   at Ipreo.AutomationFramework.UI.Services.SmartWait.WaitUntil[T](T testObject, Func`2 condition)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.Eval[TResult,TNativeElement](ElementExpression`2 expression)
+   at Ipreo.AutomationFramework.UI.Selenium.Components.Native.ElementDecorator.GetAttribute(String attributeName)
+   at Ipreo.AutomationFramework.UI.Components.Element.GetAttribute(String attributeName)
+   at Ipreo.Events.Automation.Common.Elements.Controls.Concrette.MainMenuElement.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Common\Elements\Controls\Concrette\MainMenuElement.cs:line 16
+   at Ipreo.Events.Automation.Steps.Common.MainContext.NavigateTo(String[] menuItems) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Steps\Common\MainContext.cs:line 24
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateIplanner(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 333
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.Duplicate(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 307
+   at Ipreo.Events.Automation.Tests.Utils.EventsHelper.DuplicateEvent(EventEntity eventInfo) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\Utils\EventsHelper.cs:line 295
+   at Ipreo.Events.Automation.Tests.IPlanner.Event_Details.EventDetailsGeneralDefinition.GivenIDuplicateIplannerCompanyRelatedEventType() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\IPlanner\Event Details\Event Details General.Definition.cs:line 61
+   at lambda_method(Closure , IContextManager )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature.ScenarioCleanup()
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole(String testID, String roleValue, String[] exampleTags) in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 25
+   at Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature._7_SelectAndSaveRole_Sole() in C:\BuildAgent\work\47273e3e8396b23c\Ipreo.Events.Automation.Tests\SpecFlowGeneratedFiles\Event Details General.feature:line 21
+</StackTrace></ErrorInfo></Output></UnitTestResult><UnitTestResult executionId="4ba1485b-ea60-4ad8-96db-22b221414028" testId="20e52cff-9e06-3cd3-1442-c2e88e364abd" testName="_7_SelectAndSaveRole_JointLeadUBSLogistics" computerName="WIN-G7THORJDL33" duration="00:00:42.7195602" startTime="2019-02-26T10:44:30.0769697+00:00" endTime="2019-02-26T10:45:16.0459697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ba1485b-ea60-4ad8-96db-22b221414028"><Output><StdOut>Environment: QX
+Url: https://web-eq.qx.i-deal.com/IP/
+-&gt; Using app.config
+[10:44:31] Feature 'Event Details General' run started.
+[10:44:33] Feature 'Event Details General'. BeforeFeature finished. Execution time: 00:00:02.1686948
+bug
+[10:44:33] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+DuplicateIplannerEvent: eventName '*iPlannerEventDetailsGeneralSelectAndSaveRole_Master_DO_NOT_TOUCH', eventDate '10/10/2031 12:00:00 AM'
+[10:44:55] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:21.6996679
+And I select Joint Lead (UBS Logistics) from dropdown for 'Role' on 'Event Details' page
+[10:45:10] Step 'I select Joint Lead (UBS Logistics) from dropdown for 'Role' on 'Event Details' page' execution time : 00:00:15.3957969
+When I click on 'Save' button on Event Details page
+[10:45:14] Step 'I click on 'Save' button on Event Details page' execution time : 00:00:04.1229840
+Then I see Joint Lead (UBS Logistics) for 'Role' saved
+[10:45:15] Step 'I see Joint Lead (UBS Logistics) for 'Role' saved' execution time : 00:00:00.4177913
+[10:45:15] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:41.6756837
+[10:45:16] Feature 'Event Details General' scenarios execution finished. Intermediate execution time : 00:00:44.9015377
+Event with '2048898374' id was deleted.
+Event with '2048898509' id was deleted.
+Event with '2048898517' id was deleted.
+Event with '2048898528' id was deleted.
+Event with '2048900351' id was deleted.
+Event with '2048900358' id was deleted.
+Event with '2048900364' id was deleted.
+Event with '2048902222' id was deleted.
+Event with '2048902231' id was deleted.
+Event with '2048902239' id was deleted.
+Event with '2048904073' id was deleted.
+Event with '2048904081' id was deleted.
+Event with '2048904090' id was deleted.
+Event with '2048904646' id was deleted.
+Event with '2048904653' id was deleted.
+Event with '2048904663' id was deleted.
+Event with '2048906408' id was deleted.
+Event with '2048906419' id was deleted.
+Event with '2048906428' id was deleted.
+Event with '2048908218' id was deleted.
+Event with '2048908228' id was deleted.
+Event with '2048908236' id was deleted.
+Event with '2048910105' id was deleted.
+Event with '2048910112' id was deleted.
+Event with '2048910121' id was deleted.
+Event with '2048912037' id was deleted.
+Event with '2048912046' id was deleted.
+Event with '2048912055' id was deleted.
+Event with '2048913995' id was deleted.
+Event with '2048914003' id was deleted.
+Event with '2048914007' id was deleted.
+Event with '2048915858' id was deleted.
+Event with '2048915868' id was deleted.
+Event with '2048915874' id was deleted.
+Event with '2048917736' id was deleted.
+Event with '2048917743' id was deleted.
+Event with '2048917749' id was deleted.
+Event with '2048919377' id was deleted.
+Event with '2048919397' id was deleted.
+Event with '2048921218' id was deleted.
+Event with '2048921224' id was deleted.
+Event with '2048921231' id was deleted.
+Event with '2048923088' id was deleted.
+Event with '2048923089' id was deleted.
+Event with '2048923091' id was deleted.
+Event with '2048925043' id was deleted.
+Event with '2048925051' id was deleted.
+Event with '2048925059' id was deleted.
+Event with '2048926904' id was deleted.
+Event with '2048926910' id was deleted.
+Event with '2048926919' id was deleted.
+Event with '2048928752' id was deleted.
+Event with '2048928761' id was deleted.
+Event with '2048928767' id was deleted.
+Event with '2048930369' id was deleted.
+Event with '2048930375' id was deleted.
+Event with '2048930386' id was deleted.
+Event with '2048932185' id was deleted.
+Event with '2048932190' id was deleted.
+Event with '2048932198' id was deleted.
+Event with '2048933922' id was deleted.
+Event with '2048933930' id was deleted.
+Event with '2048933937' id was deleted.
+Event with '2048935722' id was deleted.
+Event with '2048935729' id was deleted.
+Event with '2048935739' id was deleted.
+Event with '2048987983' id was deleted.
+Event with '2048987984' id was deleted.
+[10:45:24] Feature 'Event Details General' finished. Full execution time : 00:00:53.3235601</StdOut></Output></UnitTestResult><UnitTestResult executionId="9338c100-903f-4469-a16b-fcc8640711f1" testId="0b49f1be-6f43-ea25-110c-7bd07f9ff7ba" testName="_7_SelectAndSaveRole_JointLeadSharedLogistics" computerName="EC2AMAZ-UD70F9O" duration="00:00:40.3355937" startTime="2019-02-26T10:44:48.2450161+00:00" endTime="2019-02-26T10:45:30.7669246+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9338c100-903f-4469-a16b-fcc8640711f1"><Output><StdOut>Environment: QX
+Url: https://web-eq.qx.i-deal.com/IP/
+-&gt; Using app.config
+[10:44:49] Feature 'Event Details General' run started.
+[10:44:50] Feature 'Event Details General'. BeforeFeature finished. Execution time: 00:00:01.1151364
+bug
+[10:44:50] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+DuplicateIplannerEvent: eventName '*iPlannerEventDetailsGeneralSelectAndSaveRole_Master_DO_NOT_TOUCH', eventDate '10/10/2031 12:00:00 AM'
+[10:45:09] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:19.2577981
+And I select Joint Lead (Shared Logistics) from dropdown for 'Role' on 'Event Details' page
+[10:45:25] Step 'I select Joint Lead (Shared Logistics) from dropdown for 'Role' on 'Event Details' page' execution time : 00:00:15.5615352
+When I click on 'Save' button on Event Details page
+[10:45:29] Step 'I click on 'Save' button on Event Details page' execution time : 00:00:04.1160642
+Then I see Joint Lead (Shared Logistics) for 'Role' saved
+[10:45:29] Step 'I see Joint Lead (Shared Logistics) for 'Role' saved' execution time : 00:00:00.4212823
+[10:45:29] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:39.3958760
+[10:45:30] Feature 'Event Details General' scenarios execution finished. Intermediate execution time : 00:00:41.4584856
+Event with '2048987985' id was deleted.
+[10:45:31] Feature 'Event Details General' finished. Full execution time : 00:00:41.9383771</StdOut></Output></UnitTestResult><UnitTestResult executionId="a911817e-d6fa-45c9-b630-da88c9bc2797" testId="a0e02b07-b4ca-e2d2-11e3-bb9ab6a8889f" testName="_7_SelectAndSaveRole_Sole" computerName="IP-0A820686" duration="00:00:40.2796447" startTime="2019-02-26T10:44:57.7002863+00:00" endTime="2019-02-26T10:45:40.1191929+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a911817e-d6fa-45c9-b630-da88c9bc2797"><Output><StdOut>Environment: QX
+Url: https://web-eq.qx.i-deal.com/IP/
+-&gt; Using app.config
+[10:44:58] Feature 'Event Details General' run started.
+[10:44:59] Feature 'Event Details General'. BeforeFeature finished. Execution time: 00:00:00.9068769
+bug
+[10:44:59] Scenario 'Event Details General 7. Select and save Role' run started.
+Given I duplicate iplanner company related event type as coordinator user
+DuplicateIplannerEvent: eventName '*iPlannerEventDetailsGeneralSelectAndSaveRole_Master_DO_NOT_TOUCH', eventDate '10/10/2031 12:00:00 AM'
+[10:45:19] Step 'I duplicate iplanner company related event type as coordinator user' execution time : 00:00:19.2335300
+And I select Sole from dropdown for 'Role' on 'Event Details' page
+[10:45:34] Step 'I select Sole from dropdown for 'Role' on 'Event Details' page' execution time : 00:00:15.7708718
+When I click on 'Save' button on Event Details page
+[10:45:38] Step 'I click on 'Save' button on Event Details page' execution time : 00:00:03.8202914
+Then I see Sole for 'Role' saved
+[10:45:39] Step 'I see Sole for 'Role' saved' execution time : 00:00:00.4501439
+[10:45:39] Scenario 'Event Details General 7. Select and save Role' execution finished. Execution time : 00:00:39.3147310
+[10:45:40] Feature 'Event Details General' scenarios execution finished. Intermediate execution time : 00:00:41.1942593
+[10:45:40] Feature 'Event Details General' finished. Full execution time : 00:00:41.5784716</StdOut></Output></UnitTestResult></Results>
+<TestDefinitions>
+
+	<UnitTest name="_2_CreateEvent" storage="d:\users\buildagent14\buildagent\work\19c0fcf5c27dcd98\tests\ipreo.events.automation.tests.dll" id="431540c3-10ad-570b-c133-70fd5b87b98d">
+		<TestCategory>
+			<TestCategoryItem TestCategory="UBS" />
+			<TestCategoryItem TestCategory="Baclays" />
+			<TestCategoryItem TestCategory="Missouri" />
+			<TestCategoryItem TestCategory="EventDetails" />
+			<TestCategoryItem TestCategory="OtherAreas" />
+			<TestCategoryItem TestCategory="Smoke" />
+			<TestCategoryItem TestCategory="QX" />
+			<TestCategoryItem TestCategory="Demo" />
+		</TestCategory>
+		<Execution id="0f829513-d002-486c-8081-a3f282a37fe3" />
+		<TestMethod codeBase="D:\Users\buildagent14\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_2_CreateEvent" />
+	</UnitTest>
+
+<UnitTest name="_7_SelectAndSaveRole_JointLeadUBSLogistics" storage="d:\users\buildagent14\buildagent\work\19c0fcf5c27dcd98\tests\ipreo.events.automation.tests.dll" id="20e52cff-9e06-3cd3-1442-c2e88e364abd"><TestCategory><TestCategoryItem TestCategory="UBS" /><TestCategoryItem TestCategory="Production" /><TestCategoryItem TestCategory="Demo" /><TestCategoryItem TestCategory="bug" /><TestCategoryItem TestCategory="EventDetails" /><TestCategoryItem TestCategory="OtherAreas" /><TestCategoryItem TestCategory="446699" /><TestCategoryItem TestCategory="QX" /><TestCategoryItem TestCategory="Missouri" /></TestCategory><Execution id="21c22c0f-91a8-4897-8542-d9026f4924d6" /><TestMethod codeBase="D:\Users\buildagent14\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_7_SelectAndSaveRole_JointLeadUBSLogistics" /><Execution id="4ba1485b-ea60-4ad8-96db-22b221414028" /></UnitTest><UnitTest name="_7_SelectAndSaveRole_JointLeadSharedLogistics" storage="d:\users\buildagent14\buildagent\work\19c0fcf5c27dcd98\tests\ipreo.events.automation.tests.dll" id="0b49f1be-6f43-ea25-110c-7bd07f9ff7ba"><TestCategory><TestCategoryItem TestCategory="UBS" /><TestCategoryItem TestCategory="Production" /><TestCategoryItem TestCategory="Demo" /><TestCategoryItem TestCategory="bug" /><TestCategoryItem TestCategory="EventDetails" /><TestCategoryItem TestCategory="OtherAreas" /><TestCategoryItem TestCategory="446699" /><TestCategoryItem TestCategory="QX" /><TestCategoryItem TestCategory="Missouri" /></TestCategory><Execution id="4a0bb712-9392-4140-887e-68f9d32508a2" /><TestMethod codeBase="D:\Users\buildagent14\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_7_SelectAndSaveRole_JointLeadSharedLogistics" /><Execution id="9338c100-903f-4469-a16b-fcc8640711f1" /><TestMethod codeBase="C:\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_7_SelectAndSaveRole_JointLeadSharedLogistics" /></UnitTest><UnitTest name="_7_SelectAndSaveRole_Sole" storage="d:\users\buildagent14\buildagent\work\19c0fcf5c27dcd98\tests\ipreo.events.automation.tests.dll" id="a0e02b07-b4ca-e2d2-11e3-bb9ab6a8889f"><TestCategory><TestCategoryItem TestCategory="UBS" /><TestCategoryItem TestCategory="Production" /><TestCategoryItem TestCategory="Demo" /><TestCategoryItem TestCategory="bug" /><TestCategoryItem TestCategory="EventDetails" /><TestCategoryItem TestCategory="OtherAreas" /><TestCategoryItem TestCategory="446699" /><TestCategoryItem TestCategory="QX" /><TestCategoryItem TestCategory="Missouri" /></TestCategory><Execution id="fde55b15-18a2-445a-aa03-8da16eb0dbbc" /><TestMethod codeBase="D:\Users\buildagent14\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_7_SelectAndSaveRole_Sole" /><Execution id="a911817e-d6fa-45c9-b630-da88c9bc2797" /><TestMethod codeBase="C:\BuildAgent\work\19c0fcf5c27dcd98\tests\Ipreo.Events.Automation.Tests.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter" className="Ipreo.Events.Automation.Tests.IPlanner.EventDetails.EventDetailsGeneralFeature" name="_7_SelectAndSaveRole_Sole" /></UnitTest></TestDefinitions>
+
+	<TestEntries>
+		<TestEntry testId="431540c3-10ad-570b-c133-70fd5b87b98d" executionId="0f829513-d002-486c-8081-a3f282a37fe3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="20e52cff-9e06-3cd3-1442-c2e88e364abd" executionId="21c22c0f-91a8-4897-8542-d9026f4924d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="0b49f1be-6f43-ea25-110c-7bd07f9ff7ba" executionId="4a0bb712-9392-4140-887e-68f9d32508a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="a0e02b07-b4ca-e2d2-11e3-bb9ab6a8889f" executionId="fde55b15-18a2-445a-aa03-8da16eb0dbbc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="20e52cff-9e06-3cd3-1442-c2e88e364abd" executionId="4ba1485b-ea60-4ad8-96db-22b221414028" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="0b49f1be-6f43-ea25-110c-7bd07f9ff7ba" executionId="9338c100-903f-4469-a16b-fcc8640711f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestEntry testId="a0e02b07-b4ca-e2d2-11e3-bb9ab6a8889f" executionId="a911817e-d6fa-45c9-b630-da88c9bc2797" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+	</TestEntries>
+
+	<TestLists>
+		<TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+		<TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+	</TestLists>
+	
+	<ResultSummary outcome="Failed">
+		<Counters total="7" executed="7" passed="4" failed="3" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+	</ResultSummary>
+</TestRun>
